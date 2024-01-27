@@ -19,3 +19,160 @@ const JSX = (
 </div>
 );
 
+<!-- Define HTML class in JSX -->
+const JSX = (
+    <div className="myDiv">
+        <h1>Add a class to this div</h1>
+    </div>
+);
+
+<!-- Create stateless functional component -->
+const MyComponent = function() {
+    return (
+        <div>Complete!</div>
+    );
+}
+
+<!-- Render HTML elements to DOM  -->
+const JSX = (
+    <div>
+        <h1>Hello World</h1>
+        <p>Lets render this to the DOM</p>
+    </div>
+);
+ReactDOM.render(JSX, document.getElementById("challenge-node"));
+
+<!-- Create react component -->
+class MyComponent extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return(
+            <div><h1>Hello React!</h1></div>
+        );
+    }
+};
+
+<!-- Write react component from scratch -->
+class MyComponent extends React.Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return (
+        <div id="challenge-node">
+            <h1>My First React Component!</h1>
+        </div>
+        );
+    }
+};
+ReactDOM.render(<MyComponent/>, document.getElementById("challenge-node"));
+
+<!-- Create component with composition -->
+const ChildComponent = () => {
+        return (
+        <div>
+            <p>I am the child</p>
+        </div>
+        );
+    };
+    
+    class ParentComponent extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            return (
+                <div>
+                    <h1>I am the parent</h1>
+                    <ChildComponent />
+                </div>
+            );
+        }
+};
+
+<!-- Render class component to DOM -->
+class TypesOfFood extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
+                <h1>Types of Food:</h1>
+                <Fruits/>
+                <Vegetables/>
+            </div>
+        );
+    }
+};
+ReactDOM.render(<TypesOfFood/>,document.getElementById("challenge-node"));
+
+<!-- Compose react components -->
+class Fruits extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
+                <h2>Fruits:</h2>
+                <NonCitrus />
+                <Citrus />
+            </div>
+        );
+    }
+};
+    
+class TypesOfFood extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
+                <h1>Types of Food:</h1>
+                <Fruits />  
+                <Vegetables />
+            </div>
+        );
+    }
+};
+
+<!-- Use React to render nested components -->
+const TypesOfFruit = () => {
+    return (
+        <div>
+            <h2>Fruits:</h2>
+            <ul>
+                <li>Apples</li>
+                <li>Blueberries</li>
+                <li>Strawberries</li>
+                <li>Bananas</li>
+            </ul>
+        </div>
+        );
+};
+
+const Fruits = () => {
+    return (
+        <div>
+            <TypesOfFruit/>
+        </div>
+        );
+    };
+
+class TypesOfFood extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
+                <h1>Types of Food:</h1>
+                <Fruits />
+            </div>
+        );
+    }
+};
