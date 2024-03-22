@@ -79,7 +79,7 @@ const addMessage = (message) => {
     }
     };
 
-    const messageReducer = (state = [], action) => {
+const messageReducer = (state = [], action) => {
     switch (action.type) {
         case ADD:
         return [
@@ -155,3 +155,12 @@ class DisplayMessages extends React.Component {
     }
 
     };
+
+<!-- Map State to Props -->
+const state = [];
+
+const mapStateToProps= (state) => {
+    return {
+        messages: state
+    }
+};
